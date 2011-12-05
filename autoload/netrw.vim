@@ -1,7 +1,8 @@
 " netrw.vim: Handles file transfer and remote directory listing across
 "            AUTOLOAD SECTION
-" Date:		May 31, 2011
-" Version:	142
+" Date:		Dec 5, 2011
+" Version:	143
+" Modified by:	Damian Nycz <Ndamian.Onycz@SgPmail.AcomM-NOSPAM>
 " Maintainer:	Charles E Campbell, Jr <NdrOchip@ScampbellPfamily.AbizM-NOSPAM>
 " GetLatestVimScripts: 1075 1 :AutoInstall: netrw.vim
 " Copyright:    Copyright (C) 1999-2010 Charles E. Campbell, Jr. {{{1
@@ -7395,7 +7396,7 @@ fun! s:LocalListing()
 
    elseif exists("b:netrw_curdir") && b:netrw_curdir !~ '^.*://' && !isdirectory(filename)
     if (has("win32") || has("win95") || has("win64") || has("win16"))
-     if filename =~ '\.[eE][xX][eE]$' || filename =~ '\.[cC][oO][mM]$' || filename =~ '\.[bB][aA][tT]$'
+     if filename =~ '\.[eE][xX][eE]$' || filename =~ '\.[cC][oO][mM]$' || filename =~ '\.[bB][aA][tT]$' || filename =~ '\.[cC][mM][dD]$'
       " indicate an executable
 "      call Decho("indicate <".filename."> is executable with trailing *")
       let pfile= filename."*"
